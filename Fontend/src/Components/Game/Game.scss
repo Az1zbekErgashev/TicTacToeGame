@@ -1,0 +1,208 @@
+body {
+    overflow: hidden;
+}
+
+.game-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/ce44cf145197895.629b268b5a47d.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .game-box {
+            width: 800px;
+            height: 700px;
+            backdrop-filter: blur(15px) brightness(60%);
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 20px white;
+        }
+    }
+}
+
+.winnerBox {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+    img {
+        width: 100vw;
+        // object-fit: contain;
+        height: 100vh;
+        filter: brightness(30%);
+    }
+
+    h1 {
+        width: 100%;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 50%;
+        color: white;
+        font-size: 60px;
+        transform: translateX(-50%);
+        position: absolute;
+    }
+
+    i {
+        z-index: 1;
+        top: 30%;
+        transform: translateY(-50%);
+        left: 50%;
+        color: white;
+        font-size: 80px;
+        cursor: pointer;
+        transform: translateX(-50%);
+        position: absolute;
+
+    }
+}
+
+.palyers-board {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 50px;
+    align-items: center;
+
+    div {
+        width: 120px;
+        height: 120px;
+        overflow: hidden;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-position:center ;
+        background-size: cover;
+
+        img {
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            object-fit: contain;
+            width: 128px;
+            border-radius: 0px;
+
+        }
+    }
+    .Xelement{
+        border: 1px solid white;
+    }.Oelement{
+        border: 1px solid white;
+
+    }
+    
+}
+
+.game-board {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    background-color: red;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 20px;
+
+    background-color: rgb(20, 20, 54);
+
+    div {
+        margin-left: 10px;
+        width: 120px;
+        height: 120px;
+    }
+
+    input {
+        width: 120px;
+        height: 120px;
+        overflow: hidden;
+        margin: 0 10px;
+        text-align: center;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        font-weight: 900;
+        font-size: 100px;
+        color: red;
+        caret-color: white;
+    }
+
+}
+
+@media (max-width: 726px) {
+    .game-container {
+        .container {
+            .game-box {
+                width: 300px;
+                height: 500px;
+                border-radius: 10px;
+            }
+        }
+    }
+    .winnerBox {
+        h1 {
+            font-size: 30px;
+            width: 100%;
+            text-align: center;
+            transform: translateX(-50%);
+            position: absolute;
+        }
+    
+        i {
+            z-index: 1;
+            top: 30%;
+            transform: translateY(-50%);
+            left: 50%;
+            color: white;
+            font-size: 80px;
+            cursor: pointer;
+            transform: translateX(-50%);
+            position: absolute;
+    
+        }
+    }
+    .palyers-board {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px 10px;
+        div {
+            width: 100px;
+            height: 100px;
+        }
+    }
+    
+    .game-board {
+        bottom: 20px;
+        width: 280px;
+        height: 300px;
+        div {
+            margin-left: 10px;
+            width: 60px;
+            height: 60px;
+        }
+    
+        input {
+            width: 60px;
+            height: 60px;
+            margin: 0px;
+            font-size: 50px;
+        }
+    
+    }
+}
